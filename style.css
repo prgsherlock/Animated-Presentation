@@ -1,0 +1,103 @@
+ @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap'); 
+:root{
+  --page-1-color:steelblue;
+  --page-2-color:tan;
+  --page-3-color:teal;
+  --page-4-color:slateblue;
+  --animation-speed:1.5s; 
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.5;
+  color:#333;
+  background:white;  
+  display:flex; 
+  flex-direction:column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color:#333; 
+}
+p{
+  margin:20px; 
+}
+.page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:0 20px;
+}
+ .page h1{
+  font-size: 3rem;
+  color:white;
+  
+ }
+ .page p{
+  font-size: 1.3rem;
+  color:white;
+ }
+ #page-1{
+  background-color: var(--page-1-color);
+ }
+ #page-2{
+  background-color:var(--page-2-color); 
+ }
+ #page-3{
+  background-color:var(--page-3-color); 
+ }
+ #page-4{
+  background-color:var(--page-4-color);
+ }
+.btn{ 
+  background:#f4f4f4; 
+  padding:15px 25px;
+  border-radius: 6px;
+  margin:10px;  
+  transition: all .5s ease-in-out;
+}
+.btn:hover,
+.btn-dark{
+  background:#333; 
+  color:#fff; 
+}
+.btn-dark:hover{
+  background:#fff; 
+  color:#333; 
+}
+#page-1 h1 {
+  transform: translateY(-450px);
+  animation:animateh1 var(--animation-speed) forwards ease-in ; 
+}
+#page-1 p {
+  transform:translateX(-1550px);
+  animation: animatep var(--animation-speed) 1s forwards
+  ease-in;
+}
+@keyframes animateh1 {
+  to{
+    transform: translateY(0);
+  }
+}
+@keyframes animatep {
+  to{
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
